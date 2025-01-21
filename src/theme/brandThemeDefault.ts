@@ -51,7 +51,7 @@ export const defaultTheme = createTheme({
 
   // Define font family and styles for headings and body text
   headings: {
-    // fontFamily: "Rozha One, serif", // Using Rozha One for headings
+    fontFamily: "Space Grotesk, serif", // Using Space Grotesk for headings
     sizes: {
       h1: { fontSize: rem(48), fontWeight: 700 },
       h2: { fontSize: rem(40), fontWeight: 600 },
@@ -62,7 +62,8 @@ export const defaultTheme = createTheme({
     },
   },
 
-  // fontFamily: "Questrial, sans-serif", // Using Questrial for body text
+  // Set fontFamily for body text
+  fontFamily: "Questrial, sans-serif", // Using Questrial for body text
 
   // Control the spacing and padding (e.g., for margins or layout spacing)
   spacing: {
