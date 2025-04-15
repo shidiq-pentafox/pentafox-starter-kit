@@ -23,29 +23,45 @@ This template includes a fully functional Todo application, showcasing:
 
 ## Getting Started
 
-### Prerequisites
-- Node.js 16+ and npm/yarn
-
-### Installation
+### Method 1: Using NPM (Preferred)
 
 ```bash
-# Using npm
-npm create vite@latest my-app -- --template github:pentafox/pentafox-starter-kit
+# Create a new Vite React project
+npm create vite@latest my-app --template react-ts
 cd my-app
+
+# Install dependencies
 npm install
+
+# Install Pentafox starter kit
+npm install pentafox-starter-kit
+
+# Copy the template content to your project
+cp -r node_modules/pentafox-starter-kit/template/* .
+cp node_modules/pentafox-starter-kit/template/.* . 2>/dev/null || :
+
+# Install the dependencies specified in the template
+npm install
+
+# Start the development server
 npm run dev
+```
 
-# Using yarn
-yarn create vite my-app --template github:pentafox/pentafox-starter-kit
-cd my-app
-yarn
-yarn dev
+### Method 2: Using Git (Alternative)
 
-# Using pnpm
-pnpm create vite my-app --template github:pentafox/pentafox-starter-kit
+```bash
+# Clone the repository
+git clone https://github.com/pentafox/pentafox-starter-kit.git my-app
 cd my-app
-pnpm install
-pnpm dev
+
+# Remove the Git history
+rm -rf .git
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
 ```
 
 ## Project Structure
@@ -57,16 +73,16 @@ pentafox-starter-kit/
 │   ├── api/             # API integration layers
 │   ├── assets/          # Images, fonts, etc.
 │   ├── components/      # Reusable UI components
-│   ├── hooks/           # Custom React hooks
 │   ├── layout/          # Layout components
 │   ├── pages/           # Page components
+│   ├── Routes/          # Routing configuration
+│   ├── service/         # Service layers
 │   ├── store/           # Zustand store definitions
 │   ├── theme/           # Mantine theme configuration
-│   ├── utils/           # Utility functions
 │   ├── App.tsx          # Main App component
 │   ├── main.tsx         # Application entry point
 │   └── vite-env.d.ts    # Vite type definitions
-├── .eslintrc.js         # ESLint configuration
+├── eslint.config.js     # ESLint configuration
 ├── .gitignore           # Git ignore rules
 ├── index.html           # HTML entry point
 ├── package.json         # Project dependencies and scripts
@@ -89,12 +105,12 @@ The included Todo application demonstrates:
 
 ### Theming
 
-The template uses Mantine UI which supports extensive theming. Modify the theme configuration in `src/theme/index.ts`.
+The template uses Mantine UI which supports extensive theming. Modify the theme configuration in `src/theme/brandThemeDefault.ts`.
 
 ### Adding New Pages
 
 1. Create a new page component in the `src/pages` directory
-2. Add a route for your page in `src/App.tsx` using React Router
+2. Add a route for your page in `src/Routes/NavigationRoutes.tsx` using React Router
 
 ### State Management
 
@@ -133,7 +149,7 @@ Then deploy the `dist` directory to your hosting provider of choice (Vercel, Net
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-See [CONTRIBUTING.md](contributing.md) for more details.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
 ## License
 

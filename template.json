@@ -1,37 +1,7 @@
 {
   "name": "pentafox-starter-kit",
-  "private": false,
-  "version": "1.0.1",
-  "type": "module",
   "description": "A modern React starter template with Todo app example built with Vite, TypeScript, Mantine UI, React Router, Zustand, and React Query",
-  "author": "Pentafox Technology",
-  "license": "MIT",
-  "keywords": [
-    "react",
-    "vite",
-    "typescript",
-    "mantine",
-    "starter",
-    "template",
-    "todo",
-    "zustand",
-    "react-query",
-    "vite-template"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/pentafox/pentafox-starter-kit"
-  },
-  "bugs": {
-    "url": "https://github.com/pentafox/pentafox-starter-kit/issues"
-  },
-  "homepage": "https://github.com/pentafox/pentafox-starter-kit#readme",
-  "files": [
-    "template",
-    "template.json",
-    "README.md",
-    "LICENSE"
-  ],
+  "installation": "npm install pentafox-starter-kit && cp -r node_modules/pentafox-starter-kit/template/* . && cp node_modules/pentafox-starter-kit/template/.* . 2>/dev/null || : && npm install",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -69,12 +39,5 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
-  },
-  "engines": {
-    "node": ">=16.0.0"
-  },
-  "publishConfig": {
-    "access": "public",
-    "ignore-scripts": true
   }
-}
+} 

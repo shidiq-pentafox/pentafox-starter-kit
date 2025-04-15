@@ -1,0 +1,1 @@
+export const AUTH_STORE = '@_autherland_alfa_ai_auth_' as const;
