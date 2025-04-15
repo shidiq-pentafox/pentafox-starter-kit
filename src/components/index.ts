@@ -1,4 +1,5 @@
 import ToastNotification from "./Notification/ToastNotification";
 import Navbar from "./Navigation/Navbar";
+import { TodoList } from "./Todo";
 
-export { ToastNotification, Navbar }
+export { ToastNotification, Navbar, TodoList }
